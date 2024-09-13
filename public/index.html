@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Mortgage Calculator for British Columbia, Canada</h2>
+      <form id="mortgageForm">
+        <label for="propertyPrice">Property Price:</label>
+        <input type="number" id="propertyPrice" step="0.01" required />
+
+        <label for="downPayment">Down Payment:</label>
+        <input type="number" id="downPayment" step="0.01" required />
+
+        <label for="annualInterestRate">Annual Interest Rate (%):</label>
+        <input type="number" id="annualInterestRate" step="0.01" required />
+
+        <label for="amortizationPeriod">Amortization Period (years):</label>
+        <input type="number" id="amortizationPeriod" step="1" required />
+
+        <label for="paymentSchedule">Payment Schedule:</label>
+        <select id="paymentSchedule" required>
+          <option value="monthly">Monthly</option>
+          <option value="bi-weekly">Bi-Weekly</option>
+          <option value="accelerated bi-weekly">Accelerated Bi-Weekly</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result">
+        <h3 id="resultLabel">Payment per Payment Schedule:</h3>
+        <p id="paymentAmount">&nbsp;</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
