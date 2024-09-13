@@ -77,7 +77,7 @@ describe("Mortgage Calculator API", () => {
   });
 
   // Test input data type
-  it("should return 400 for missing required fields", (done) => {
+  it("should return 400 for wrong input data type", (done) => {
     request(app)
       .post("/api/calculate-mortgage")
       .send({
@@ -101,7 +101,7 @@ describe("Mortgage Calculator API", () => {
   });
 
   // Test input range
-  it("should return 400 for missing required fields", (done) => {
+  it("should return 400 for incorrect input range", (done) => {
     request(app)
       .post("/api/calculate-mortgage")
       .send({
@@ -123,7 +123,7 @@ describe("Mortgage Calculator API", () => {
   });
 
   // Test allowed values for paymentSchedule
-  it("should return 400 for missing required fields", (done) => {
+  it("should return 400 for unallowed payment schedule value", (done) => {
     request(app)
       .post("/api/calculate-mortgage")
       .send({
@@ -147,7 +147,7 @@ describe("Mortgage Calculator API", () => {
   });
 
   // Test maximum amortization period on a CMHC insured mortgage to be 25 years
-  it("should return 400 for missing required fields", (done) => {
+  it("should return 400 for incorrect amortization period", (done) => {
     request(app)
       .post("/api/calculate-mortgage")
       .send({
@@ -171,7 +171,7 @@ describe("Mortgage Calculator API", () => {
   });
 
   // Test amortization period to be [5, 10, 15, 20, 25, 30]
-  it("should return 400 for missing required fields", (done) => {
+  it("should return 400 for incorrect amortization period increments", (done) => {
     request(app)
       .post("/api/calculate-mortgage")
       .send({
@@ -265,7 +265,7 @@ describe("Mortgage Calculator API", () => {
   });
 
   // Test for invalid payment schedule
-  it("should return 400 when paymentSchedule is invalid", (done) => {
+  it("should return 400 for invalid payment schedule", (done) => {
     request(app)
       .post("/api/calculate-mortgage")
       .send({
