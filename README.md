@@ -2,19 +2,19 @@
 
 ## Description
 
-A BC mortgage calculator API built using node.js. CMHC insurance has been considered.
+A BC mortgage calculator API built using node.js. CMHC insurance has been considered.  
 Testing has been written and a user interface that communicates with the API is also included.
 
-Input
-● property price
-● down payment
-● annual interest rate
-● amortization period (5 year increments between 5 and 30 years)
-● payment schedule (accelerated bi-weekly, bi-weekly, monthly)
+Input  
+a. property price  
+b. down payment  
+c. annual interest rate  
+d. amortization period (5 year increments between 5 and 30 years)  
+e. payment schedule (accelerated bi-weekly, bi-weekly, monthly)
 
-Expected Output
-● payment per payment schedule
-● an error if the inputs are not valid. This includes cases where the down payment is not
+Expected Output  
+a. payment per payment schedule  
+b. an error if the inputs are not valid. This includes cases where the down payment is not
 large enough.
 
 ## Installation
